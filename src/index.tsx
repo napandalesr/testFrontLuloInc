@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Layout from './Containers/Layout';
-import './index.css';
+import LayoutContainer from './Containers/Layout';
+import { ConfigProvider } from 'antd';
+import es_ES from 'antd/lib/locale/es_ES';
+import './index.scss';
+
+import 'antd/dist/antd.min.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Layout />
+    <ConfigProvider locale={es_ES}>
+      <LayoutContainer />
+    </ConfigProvider>
   </React.StrictMode>
 );
 
