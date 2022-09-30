@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import LayoutContainer from './Containers/Layout';
 import { ConfigProvider } from 'antd';
+import { BrowserRouter } from "react-router-dom";
 import es_ES from 'antd/lib/locale/es_ES';
 import './index.scss';
 
@@ -13,7 +14,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ConfigProvider locale={es_ES}>
-      <LayoutContainer />
+      <BrowserRouter>
+        <LayoutContainer />
+      </BrowserRouter>
     </ConfigProvider>
   </React.StrictMode>
 );
