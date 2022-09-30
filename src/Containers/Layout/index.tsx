@@ -3,7 +3,7 @@ import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   UnorderedListOutlined,
-  PicCenterOutlined
+  HomeOutlined
 } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
 
@@ -24,7 +24,7 @@ const LayoutContainer: React.FC = () => {
       items={[
         {
           key: '1',
-          icon: <PicCenterOutlined />,
+          icon: <HomeOutlined />,
           label: 'Habitaciones'
         },
         {
