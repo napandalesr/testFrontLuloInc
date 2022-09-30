@@ -1,18 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   UnorderedListOutlined,
   HomeOutlined
 } from '@ant-design/icons';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Spin } from 'antd';
+import { useNavigate } from 'react-router-dom';
+
+import Routes from "../../Routes";
 
 import "./style.scss";
+import { _Routes } from "../../Utils/constanst";
 
 const { Header, Sider, Content } = Layout;
 
 const LayoutContainer: React.FC = () => {
   const [collapsed, setCollapsed] = useState(true);
+  const navigate = useNavigate();
+
+  const Nav = (ruta: string): void => {
+    navigate(ruta);
+  };
 
   return <Layout>
   <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -25,12 +34,14 @@ const LayoutContainer: React.FC = () => {
         {
           key: '1',
           icon: <HomeOutlined />,
-          label: 'Habitaciones'
+          label: 'Habitaciones',
+          onClick: () => Nav(_Routes.Home)
         },
         {
           key: '2',
           icon: <UnorderedListOutlined/>,
-          label: 'Reservas'
+          label: 'Reservas',
+          onClick: () => Nav(_Routes.List)
         }
       ]}
     />
@@ -50,10 +61,12 @@ const LayoutContainer: React.FC = () => {
         minHeight: 280
       }}
     >
-      Content
-    </Content>
-  </Layout>
-</Layout>;
+        <Suspense fallback={<Spin size="large" />}>
+          <Routes/>
+        </Suspense>
+      </Content>
+    </Layout>
+  </Layout>;
 };
 
 export default LayoutContainer;
