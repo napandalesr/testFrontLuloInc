@@ -1,4 +1,4 @@
 export interface IResponse {
-  status: number,
+  status: number
   data: any
 }

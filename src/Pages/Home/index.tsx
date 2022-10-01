@@ -1,7 +1,10 @@
 import React from "react";
+import FormReserva from "../../Containers/FormHabitacion";
 
 const Home: React.FC = () => {
-  return <>Home</>;
+  return <>
+  <FormReserva/>
+  </>;
 };
 
 export default Home;
