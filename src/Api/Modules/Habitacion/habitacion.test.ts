@@ -8,7 +8,7 @@ describe("Pruebas api habitación", () => {
       precio: "50.000",
       estado: "disponible"
     };
-    const { status} = await postHabitacion(room);
+    const { status } = await postHabitacion(room);
     expect(status).toEqual(200);
   });
 });

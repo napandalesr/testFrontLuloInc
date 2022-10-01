@@ -12,7 +12,8 @@
     "semi": [2, "always"],
     "@typescript-eslint/quotes":"off",
     "@typescript-eslint/strict-boolean-expressions": "off",
-    "@typescript-eslint/semi": "off"
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/no-misused-promises": "off"
   },
   "ignorePatterns":["node_modules"]
 }
