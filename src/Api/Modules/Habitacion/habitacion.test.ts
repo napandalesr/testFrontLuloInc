@@ -1,4 +1,4 @@
-import { postHabitacion } from ".";
+import { getHabitacion, postHabitacion } from ".";
 import { RoomDto } from "./dto";
 
 describe("Pruebas api habitación", () => {
@@ -11,4 +11,10 @@ describe("Pruebas api habitación", () => {
     const { status } = await postHabitacion(room);
     expect(status).toEqual(200);
   });
+
+  test("Debe listar habitaciones", async () => {
+    const { status } = await getHabitacion();
+    expect(status).toEqual(200);
+  });
+
 });
