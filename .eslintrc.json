@@ -13,7 +13,9 @@
     "@typescript-eslint/quotes":"off",
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/semi": "off",
-    "@typescript-eslint/no-misused-promises": "off"
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "no-prototype-builtins": "off"
   },
   "ignorePatterns":["node_modules"]
 }
