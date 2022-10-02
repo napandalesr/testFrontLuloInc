@@ -1,9 +1,9 @@
 import React from "react";
-import FormReserva from "../../Containers/FormHabitacion";
+import FormHabitacion from "../../Containers/FormHabitacion";
 
 const Home: React.FC = () => {
   return <>
-  <FormReserva/>
+  <FormHabitacion/>
   </>;
 };
 

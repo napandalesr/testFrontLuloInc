@@ -16,5 +16,4 @@ describe("Pruebas api habitación", () => {
     const { status } = await getHabitacion();
     expect(status).toEqual(200);
   });
-
 });

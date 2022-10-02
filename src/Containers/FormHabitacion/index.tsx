@@ -11,7 +11,7 @@ interface IForm {
   estado: string
 }
 
-const FormReserva: React.FC = () => {
+const FormHabitacion: React.FC = () => {
   const [form] = Form.useForm();
   const [precio, setPrecio] = React.useState("");
   const [loading, setLoading] = React.useState(false);
@@ -61,7 +61,7 @@ const FormReserva: React.FC = () => {
   };
 
   return <>
-     <Divider><Title level={3}>Reservado</Title></Divider>
+     <Divider><Title level={3}>Registrar Habitación</Title></Divider>
      <Spin spinning={loading}>
       <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
         <Form.Item name="capacidad" label="Capacidad" rules={[{ required: true }]}>
@@ -89,4 +89,4 @@ const FormReserva: React.FC = () => {
   </>;
 };
 
-export default FormReserva;
+export default FormHabitacion;

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import LayoutContainer from './Containers/Layout';
+import LayoutContainer from './Containers/LayoutContainer';
 import { ConfigProvider } from 'antd';
 import { BrowserRouter } from "react-router-dom";
 import es_ES from 'antd/lib/locale/es_ES';
